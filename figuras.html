@@ -5,9 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras geometricas</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <h1>Figuras Geometricas</h1>
+    <header>
+        <h1>Figuras Geometricas</h1>
+        <p>Este es el primer taller del curso práctico de Platzi</p>
+    </header>
+    <section>
+        <h2>Calcula el area y perimetro de un cuadrado</h2>
+        <form action="">
+            <label for="ladoCuadrado">Escribe cuanto mieden los lados de tu cuadrado</label>
+            <input id="ladoCuadrado" type="number">
+            <button type="button" onclick="calcularPerimetroCuadrado()">Calcula el perímetro</button>
+            <button type="button"onclick="calcularAreaCuadrado()">Calcula el área</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Calcula el area y perimetro de un triangulo equilatero</h2>
+        <form action="">
+            <label for="ladoTriangulo">Escribe cuanto mieden los lados de tu triangulo</label>
+            <input id="ladoTriangulo" type="number">
+            <label for="alturaTriangulo">Escribe la altura de tu triangulo</label>
+            <input id="alturaTriangulo" type="number">
+            <button type="button" onclick="calcularPerimetroTrianguloE()">Calcula el perímetro</button>
+            <button type="button"onclick="calcularAreaTriangulo()">Calcula el área</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Calcula la circunferencia y el area de un círculo</h2>
+        <form action="">
+            <label for="radioCirculo">Escribe cuanto miede el radio de tu circulo</label>
+            <input id="radioCirculo" type="number">
+            <button type="button" onclick="calcularCircunferencia()">Calcular la circunferencia</button>
+            <button type="button" onclick="calcularArea()">Calcular el área</button>
+        </form>
+    </section>
     <script src="./figuras.js"></script>
 </body>
 </html>

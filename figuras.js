@@ -43,9 +43,8 @@ console.log(
 
 console.log("La altura del triangulo es de: " + alturaTriangulo + "cm")
 
-function perimetroTriangulo (lado1Triangulo, lado2Triangulo, baseTriangulo) {
-     const suma = (lado1Triangulo + lado2Triangulo + baseTriangulo)
-     return suma
+function perimetroTriangulo (ladoTriangulo) {
+     return ladoTriangulo*3;
 }
 
 console.log("El perimetro del triangulo es de: " + perimetroTriangulo + "cm")
@@ -96,26 +95,44 @@ function calcularPerimetroCuadrado() {
 
     const perimetro = perimetroCuadrado(valor)
 
-    alert(perimetro)
+    const nodoResp = document.getElementById("respuestaPerimetroCuadrado");
+
+    const nodoTexto = document.createTextNode(perimetro);
+
+    nodoResp.textContent = ""
+
+    nodoResp.append(nodoTexto);
+
 }
 
 function calcularAreaCuadrado() {
-    const input = document.getElementById("ladoCuadrado");
+    const input = document.getElementById("cuadradoArea");
     const valor = input.value;
 
     const area = areaCuadrado(valor)
 
-    alert(area)
+    const nodoResp = document.getElementById("respuestaAreaCuadrado");
+
+    const nodoTexto = document.createTextNode(area);
+
+    nodoResp.textContent = ""
+
+    nodoResp.append(nodoTexto);
 }
 
 function calcularPerimetroTrianguloE() {
-    const input = document.getElementById("ladoTriangulo");
+    const input = document.getElementById("lado");
     const valor = input.value;
-    console.log(typeof(valor))
 
-    const perimetro = perimetroTriangulo(valor, valor, valor)
+    const perimetro = perimetroTriangulo(valor)
 
-    alert(perimetro)
+    const nodoResp = document.getElementById("perimetroTriangulo");
+
+    const nodoTexto = document.createTextNode(perimetro);
+
+    nodoResp.textContent = ""
+
+    nodoResp.append(nodoTexto);
 }
 
 function calcularAreaTriangulo() {
@@ -128,16 +145,28 @@ function calcularAreaTriangulo() {
 
     const area = areaTriangulo(valor, valorAltura);
 
-    alert(area);
+    const nodoResp = document.getElementById("areaTriangulo");
+
+    const nodoTexto = document.createTextNode(area);
+
+    nodoResp.textContent = ""
+
+    nodoResp.append(nodoTexto);
 }
 
 function calcularCircunferencia() {
-    const input = document.getElementById("radioCirculo");
+    const input = document.getElementById("radio");
     const valor = input.value;
 
     const circunferencia = perimetroCirculo(valor)
 
-    alert(circunferencia);
+    const nodoResp = document.getElementById("circunferencia");
+
+    const nodoTexto = document.createTextNode(circunferencia.toFixed(2));
+
+    nodoResp.textContent = ""
+
+    nodoResp.append(nodoTexto);
 }
 
 function calcularArea() {
@@ -146,5 +175,11 @@ function calcularArea() {
 
     const area = areaCirculo(valor)
 
-    alert(area);
+    const nodoResp = document.getElementById("area");
+
+    const nodoTexto = document.createTextNode(area.toFixed(2));
+
+    nodoResp.textContent = ""
+
+    nodoResp.append(nodoTexto);
 }

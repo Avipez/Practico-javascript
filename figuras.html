@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Figuras Geometricas</h1>
@@ -19,34 +21,55 @@
     <section>
         <h2>Calcula el area y perimetro de un cuadrado</h2>
         <form action="">
-            <label for="ladoCuadrado">Escribe cuanto mieden los lados de tu cuadrado</label>
-            <input id="ladoCuadrado" type="number">
-            <button type="button" onclick="calcularPerimetroCuadrado()">Calcula el perímetro</button>
-            <button type="button"onclick="calcularAreaCuadrado()">Calcula el área</button>
+            <div>
+                <label for="ladoCuadrado">Escribe cuanto miede un lado de tu cuadrado para calcular el perimetro</label>
+                <input onclick="this.value = '';calcularPerimetroCuadrado()" onkeyup=" calcularPerimetroCuadrado()"
+                    id="ladoCuadrado" type="number" placeholder="0">
+                Perimetro
+                <label id="respuestaPerimetroCuadrado"></label>
+            </div>
+            <div>
+                <label for="cuadradoArea">Escribe cuanto mide un lado de tu cuadrado para calcular su area</label>
+                <input type="number" id="cuadradoArea" onclick="this.value = '';calcularAreaCuadrado()" onkeyup="calcularAreaCuadrado()" placeholder="0">
+                Area
+                <label id="respuestaAreaCuadrado"></label>
+            </div>
         </form>
     </section>
 
     <section>
         <h2>Calcula el area y perimetro de un triangulo equilatero</h2>
         <form action="">
-            <label for="ladoTriangulo">Escribe cuanto mieden los lados de tu triangulo</label>
-            <input id="ladoTriangulo" type="number">
-            <label for="alturaTriangulo">Escribe la altura de tu triangulo</label>
-            <input id="alturaTriangulo" type="number">
-            <button type="button" onclick="calcularPerimetroTrianguloE()">Calcula el perímetro</button>
-            <button type="button"onclick="calcularAreaTriangulo()">Calcula el área</button>
+            <div>
+                <label for="ladoTriangulo">Escribe cuanto mieden los lados de tu triangulo</label>
+                <input id="lado" type="number" onclick="this.value = ''; calcularPerimetroTrianguloE()" onkeyup="calcularPerimetroTrianguloE()" placeholder="0">
+                <label id="perimetroTriangulo"></label>
+            </div>
+            <div>
+                <label for="ladoTriangulo">Escribe cuanto miede la base de tu triangulo</label>
+                <input id="ladoTriangulo" type="number" onclick="this.value = ''; calcularAreaTriangulo()" onkeyup="calcularAreaTriangulo()" placeholder="0">
+                <label for="alturaTriangulo">Escribe la altura de tu triangulo</label>
+                <input id="alturaTriangulo" type="number" onclick="this.value = ''; calcularAreaTriangulo()" onkeyup="calcularAreaTriangulo()" placeholder="0">
+                <label id="areaTriangulo"></label>
+            </div>
         </form>
     </section>
 
     <section>
         <h2>Calcula la circunferencia y el area de un círculo</h2>
         <form action="">
-            <label for="radioCirculo">Escribe cuanto miede el radio de tu circulo</label>
-            <input id="radioCirculo" type="number">
-            <button type="button" onclick="calcularCircunferencia()">Calcular la circunferencia</button>
-            <button type="button" onclick="calcularArea()">Calcular el área</button>
-        </form>
+            <div class="">
+                <label for="radio">Calcula la circunferencia de tu circulo escribiendo su radio</label>
+                <input id="radio" type="number" onclick="this.value = '';calcularCircunferencia()" onkeyup="calcularCircunferencia()" placeholder="0">
+                <label for="" id="circunferencia"></label>
+            </div>
+            <div class="">
+                <label for="radioCirculo">Calcula el area de tu circulo escribiendo su radio</label>
+                <input id="radioCirculo" type="number" onclick="this.value = '';calcularArea()" onkeyup="calcularArea()" placeholder="0">
+                <label id="area"></label>
+            </div>
     </section>
     <script src="./figuras.js"></script>
 </body>
+
 </html>

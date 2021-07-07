@@ -138,8 +138,7 @@ function calcularPerimetroTrianguloE() {
 function calcularAreaTriangulo() {
     const input = document.getElementById("ladoTriangulo");
     const valor = input.value;
-    console.log(typeof(valor))
-
+    
     const inputAltura = document.getElementById("alturaTriangulo");
     const valorAltura = inputAltura.value;
 
